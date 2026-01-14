@@ -3,8 +3,8 @@ import AnimatedSection from "./AnimatedSection";
 
 const Qualification = () => {
   return (
-    <section id="experience" className="py-20 ">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="min-h-screen">
+      <div className="mx-auto container px-4 sm:px-6 lg:px-20">
         <AnimatedSection>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">
@@ -34,7 +34,7 @@ const Qualification = () => {
               {/* Education Item */}
               <div className="relative pl-16 pb-8">
                 <div className="absolute left-4 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
-                <div className="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-blue-600">
+                <div className="shadow-blue-200 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-blue-600">
                   <div className="flex items-start justify-between mb-2">
                     <h4 className="text-xl font-bold ">B.Sc. in Mathematics</h4>
                     <span className="text-sm -500  px-3 py-1 rounded-full">
@@ -42,9 +42,9 @@ const Qualification = () => {
                     </span>
                   </div>
                   <p className="-600 mb-3 font-medium">
-                    [Your University Name]
+                    [National University], [2022-23]
                   </p>
-                  <p className=" leading-relaxed">
+                  <p className="flex-1 leading-relaxed">
                     Focus on{" "}
                     <span className="font-semibold text-blue-600">Logic</span>,{" "}
                     <span className="font-semibold text-blue-600">
@@ -79,16 +79,16 @@ const Qualification = () => {
               {/* Experience Item */}
               <div className="relative pl-16 pb-8">
                 <div className="absolute left-4 top-1 w-4 h-4 bg-purple-600 rounded-full border-4 border-white shadow-lg"></div>
-                <div className="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-purple-600">
+                <div className="shadow-purple-200 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-purple-600">
                   <div className="flex items-start justify-between mb-2">
                     <h4 className="text-xl font-bold ">
-                      Operations Associate & In-House Developer
+                      Operations Associate
                     </h4>
                     <span className="text-sm -500  px-3 py-1 rounded-full">
                       Current
                     </span>
                   </div>
-                  <p className="-600 mb-3 font-medium">[Name of Pharmacy]</p>
+                  <p className="-600 mb-3 font-medium">[Al Shefa Pharmacy]</p>
                   <p className=" leading-relaxed">
                     Built a custom{" "}
                     <span className="font-semibold text-purple-600">

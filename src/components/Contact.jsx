@@ -4,8 +4,8 @@ import AnimatedSection from "./AnimatedSection";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 ">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="min-h-screen pt-20 bg-gray-900">
+      <div className="mx-auto container px-4 sm:px-6 lg:px-20">
         <AnimatedSection>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">
@@ -18,12 +18,12 @@ const Contact = () => {
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 gap-12">
           {/* Contact Info Cards */}
           <AnimatedSection delay={0.2}>
-            <div className="space-y-6">
+            <div className="space-y-6 flex justify-between gap-6">
               <motion.div
-                className="bg-linear-to-br from-blue-50 to-blue-100 rounded-xl p-6 shadow-lg border-2 border-blue-200"
+                className="bg-linear-to-br from-blue-500 to-blue-900 mb-0 rounded-xl w-full p-6 shadow-lg border-2 border-blue-200"
                 whileHover={{ y: -5, shadow: "xl" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -35,9 +35,9 @@ const Contact = () => {
                     <h3 className="text-xl font-bold  mb-2">Email</h3>
                     <a
                       href="mailto:[Your Email]"
-                      className="text-blue-600 hover:text-blue font-medium break-all"
+                      className="text-white font-medium break-all"
                     >
-                      [Your Email]
+                      [sorkar.s.sourav@gmail.com]
                     </a>
                     <p className="-600 text-sm mt-2">
                       Send me an email anytime
@@ -47,7 +47,7 @@ const Contact = () => {
               </motion.div>
 
               <motion.div
-                className="bg-linear-to-br from-green-50 to-green-100 rounded-xl p-6 shadow-lg border-2 border-green-200"
+                className="bg-linear-to-br from-green-50 to-green-100 mb-0 rounded-xl w-full p-6 shadow-lg border-2 border-green-200"
                 whileHover={{ y: -5, shadow: "xl" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -57,14 +57,14 @@ const Contact = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold  mb-2">Phone</h3>
-                    <p className=" font-medium">[Your Number]</p>
+                    <p className=" font-medium">[01626979066]</p>
                     <p className="-600 text-sm mt-2">Available for calls</p>
                   </div>
                 </div>
               </motion.div>
 
               <motion.div
-                className="bg-linear-to-br from-emerald-50 to-emerald-100 rounded-xl p-6 shadow-lg border-2 border-emerald-200"
+                className="bg-linear-to-br from-emerald-50 to-emerald-100 w-full rounded-xl p-6 shadow-lg border-2 border-emerald-200"
                 whileHover={{ y: -5, shadow: "xl" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -75,7 +75,7 @@ const Contact = () => {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold  mb-2">WhatsApp</h3>
                     <a
-                      href="https://wa.me/[Your Number]"
+                      href="https://wa.me/01577347724"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-emerald-600 hover:text-emerald font-medium"
@@ -94,7 +94,7 @@ const Contact = () => {
           {/* Contact Form (Visual Only) */}
           <AnimatedSection delay={0.4}>
             <motion.div
-              className="bg-gray-50 rounded-xl p-8 shadow-lg"
+              className="bg-gray-800 rounded-xl p-8 shadow-lg"
               whileHover={{ y: -2 }}
               transition={{ type: "spring", stiffness: 300 }}
             >

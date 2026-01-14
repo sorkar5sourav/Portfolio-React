@@ -3,10 +3,10 @@ import AnimatedSection from "./AnimatedSection";
 
 const About = () => {
   return (
-    <section id="about" className="py-20">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="min-h-screen">
+      <div className="mx-auto container px-6 md:px-12 lg:px-20">
         <AnimatedSection>
-          <div className="text-center mb-12">
+          <div className="text-center mb-20">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">
               About Me
             </h2>
@@ -54,7 +54,7 @@ const About = () => {
                   , creating dynamic and user-friendly web applications.
                 </p>
 
-                <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">
+                <div className="mt-6 p-4 rounded-lg border-l-4 border-blue-600">
                   <div className="flex items-start gap-3">
                     <Code className="text-blue-600 mt-1" size={24} />
                     <p className="">
@@ -102,7 +102,7 @@ const About = () => {
                   professionally.
                 </p>
 
-                <div className="mt-6 p-6 bg-linear-to-br from-purple-50 to-blue-50 rounded-lg">
+                <div className="mt-6 p-6 bg-linear-to-br from-purple-800 to-blue-900 rounded-lg">
                   <p className=" italic text-lg">
                     "The best code is not just functional—it's elegant,
                     maintainable, and solves real problems for real people."

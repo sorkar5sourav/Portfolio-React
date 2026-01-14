@@ -5,7 +5,6 @@ export const skillsData = [
       { name: "React", level: 85 },
       { name: "Tailwind CSS", level: 90 },
       { name: "HTML", level: 95 },
-      { name: "CSS", level: 90 },
     ],
   },
   {
@@ -21,6 +20,7 @@ export const skillsData = [
     skills: [
       { name: "Git", level: 85 },
       { name: "VS Code", level: 90 },
+      { name: "AI Agent", level: 65 },
     ],
   },
 ];

@@ -50,7 +50,7 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center bg-linea-to-br from-blue-50 via-white to-purple-50 pt-20"
     >
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+      <div className="mx-auto container px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
           variants={containerVariants}
@@ -110,11 +110,11 @@ const Hero = () => {
                 Download Resume
               </motion.button>
               <motion.div
-                className="flex gap-4 justify-center lg:justify-start pt-4"
+                className="flex gap-4 justify-center lg:justify-start"
                 variants={itemVariants}
               >
                 <motion.a
-                  href="https://github.com"
+                  href="https://github.com/sorkar5sourav"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 ml-4 bg-gray-100 rounded-full hover:bg-blue-100  hover:text-blue-600 transition-colors"
@@ -125,7 +125,7 @@ const Hero = () => {
                   <FaGithub size={30} />
                 </motion.a>
                 <motion.a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/sorkar-s-sourav/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-100 rounded-full hover:bg-blue-100  hover:text-blue-600 transition-colors"
@@ -136,7 +136,7 @@ const Hero = () => {
                   <FaLinkedin size={30} />
                 </motion.a>
                 <motion.a
-                  href="https://facebook.com"
+                  href="https://facebook.com/sourav.sorkar.10/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-100 rounded-full hover:bg-blue-100  hover:text-blue-600 transition-colors"

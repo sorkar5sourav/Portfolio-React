@@ -4,8 +4,7 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  
   box-sizing: border-box;
 }
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap");
@@ -28,7 +27,9 @@ body {
 section[id] {
   scroll-margin-top: 5rem;
 }
-
+p {
+  color: gray;
+}
 @media (min-width: 768px) {
   section[id] {
     scroll-margin-top: 6rem;

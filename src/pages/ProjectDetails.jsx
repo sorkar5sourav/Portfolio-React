@@ -10,7 +10,7 @@ const ProjectDetails = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 pt-16 md:pt-20">
+      <div className="min-h-screen flex items-center justify-center pt-16 md:pt-20">
         <div className="text-center">
           <h2 className="text-2xl font-bold  mb-4">Project Not Found</h2>
           <button
@@ -25,8 +25,8 @@ const ProjectDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-16 md:pt-20">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="min-h-screen pt-16 md:pt-20">
+      <div className="mx-auto container px-4 sm:px-6 lg:px-20 py-12">
         {/* Back Button */}
         <button
           onClick={() => navigate("/")}
@@ -98,13 +98,13 @@ const ProjectDetails = () => {
         </div>
 
         {/* Challenges */}
-        <div className=" rounded-xl shadow-lg p-6 md:p-8 mb-6 border-l-4 border-orange-500">
+        <div className=" rounded-xl shadow-orange-400 shadow-lg p-6 md:p-8 mb-6 border-l-4 border-orange-500">
           <h2 className="text-2xl font-bold  mb-4">Challenges</h2>
           <p className=" leading-relaxed text-lg">{project.challenges}</p>
         </div>
 
         {/* Future Improvements */}
-        <div className=" rounded-xl shadow-lg p-6 md:p-8 border-l-4 border-green-500">
+        <div className=" rounded-xl shadow-green-400 shadow-lg p-6 md:p-8 border-l-4 border-green-500">
           <h2 className="text-2xl font-bold  mb-4">Future Plans</h2>
           <p className=" leading-relaxed text-lg">{project.improvements}</p>
         </div>

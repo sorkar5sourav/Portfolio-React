@@ -12,8 +12,8 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="min-h-screen">
+      <div className="mx-auto container px-4 sm:px-6 lg:px-20">
         <AnimatedSection>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">
@@ -26,11 +26,11 @@ const Projects = () => {
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projectsData.map((project, index) => (
             <AnimatedSection key={project.id} delay={index * 0.1}>
               <motion.div
-                className=" rounded-xl shadow-lg overflow-hidden"
+                className=" rounded-xl shadow-lg shadow-amber-100 overflow-hidden"
                 whileHover={{ y: -5, shadow: "xl" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >

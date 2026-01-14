@@ -31,8 +31,8 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-gray-50">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="min-h-screen py-20 bg-gray-50/10">
+      <div className="mx-auto container px-4 sm:px-6 lg:px-20">
         <AnimatedSection>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">
@@ -45,7 +45,7 @@ const Skills = () => {
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skillsData.map((category, index) => {
             const color = getCategoryColor(category.category);
             const colorClasses = {
