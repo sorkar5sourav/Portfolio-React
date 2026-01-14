@@ -4,15 +4,15 @@ import AnimatedSection from "./AnimatedSection";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 ">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">
               Get In Touch
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg -600">
               Let's connect and discuss how we can work together
             </p>
           </div>
@@ -23,7 +23,7 @@ const Contact = () => {
           <AnimatedSection delay={0.2}>
             <div className="space-y-6">
               <motion.div
-                className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 shadow-lg border-2 border-blue-200"
+                className="bg-linear-to-br from-blue-50 to-blue-100 rounded-xl p-6 shadow-lg border-2 border-blue-200"
                 whileHover={{ y: -5, shadow: "xl" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -32,16 +32,14 @@ const Contact = () => {
                     <Mail className="text-white" size={24} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Email
-                    </h3>
+                    <h3 className="text-xl font-bold  mb-2">Email</h3>
                     <a
                       href="mailto:[Your Email]"
-                      className="text-blue-600 hover:text-blue-700 font-medium break-all"
+                      className="text-blue-600 hover:text-blue font-medium break-all"
                     >
                       [Your Email]
                     </a>
-                    <p className="text-gray-600 text-sm mt-2">
+                    <p className="-600 text-sm mt-2">
                       Send me an email anytime
                     </p>
                   </div>
@@ -49,7 +47,7 @@ const Contact = () => {
               </motion.div>
 
               <motion.div
-                className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 shadow-lg border-2 border-green-200"
+                className="bg-linear-to-br from-green-50 to-green-100 rounded-xl p-6 shadow-lg border-2 border-green-200"
                 whileHover={{ y: -5, shadow: "xl" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -58,19 +56,15 @@ const Contact = () => {
                     <Phone className="text-white" size={24} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Phone
-                    </h3>
-                    <p className="text-gray-700 font-medium">[Your Number]</p>
-                    <p className="text-gray-600 text-sm mt-2">
-                      Available for calls
-                    </p>
+                    <h3 className="text-xl font-bold  mb-2">Phone</h3>
+                    <p className=" font-medium">[Your Number]</p>
+                    <p className="-600 text-sm mt-2">Available for calls</p>
                   </div>
                 </div>
               </motion.div>
 
               <motion.div
-                className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-xl p-6 shadow-lg border-2 border-emerald-200"
+                className="bg-linear-to-br from-emerald-50 to-emerald-100 rounded-xl p-6 shadow-lg border-2 border-emerald-200"
                 whileHover={{ y: -5, shadow: "xl" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -79,18 +73,16 @@ const Contact = () => {
                     <MessageCircle className="text-white" size={24} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      WhatsApp
-                    </h3>
+                    <h3 className="text-xl font-bold  mb-2">WhatsApp</h3>
                     <a
                       href="https://wa.me/[Your Number]"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-emerald-600 hover:text-emerald-700 font-medium"
+                      className="text-emerald-600 hover:text-emerald font-medium"
                     >
                       Chat on WhatsApp
                     </a>
-                    <p className="text-gray-600 text-sm mt-2">
+                    <p className="-600 text-sm mt-2">
                       Quick response guaranteed
                     </p>
                   </div>
@@ -106,14 +98,12 @@ const Contact = () => {
               whileHover={{ y: -2 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Send a Message
-              </h3>
+              <h3 className="text-2xl font-bold  mb-6">Send a Message</h3>
               <form className="space-y-6">
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-medium  mb-2"
                   >
                     Name
                   </label>
@@ -129,7 +119,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-medium  mb-2"
                   >
                     Email
                   </label>
@@ -145,7 +135,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-medium  mb-2"
                   >
                     Subject
                   </label>
@@ -161,7 +151,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-medium  mb-2"
                   >
                     Message
                   </label>
@@ -176,7 +166,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue transition-colors shadow-lg hover:shadow-xl"
                 >
                   <Send size={20} />
                   Send Message

@@ -3,15 +3,15 @@ import AnimatedSection from "./AnimatedSection";
 
 const Qualification = () => {
   return (
-    <section id="experience" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-20 ">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">
               Qualification
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg -600">
               My educational background and professional experience
             </p>
           </div>
@@ -24,9 +24,7 @@ const Qualification = () => {
               <div className="p-3 bg-blue-100 rounded-lg">
                 <GraduationCap className="text-blue-600" size={28} />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-                Education
-              </h3>
+              <h3 className="text-2xl md:text-3xl font-bold ">Education</h3>
             </div>
 
             <div className="relative">
@@ -38,17 +36,15 @@ const Qualification = () => {
                 <div className="absolute left-4 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
                 <div className="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-blue-600">
                   <div className="flex items-start justify-between mb-2">
-                    <h4 className="text-xl font-bold text-gray-900">
-                      B.Sc. in Mathematics
-                    </h4>
-                    <span className="text-sm text-gray-500 bg-white px-3 py-1 rounded-full">
+                    <h4 className="text-xl font-bold ">B.Sc. in Mathematics</h4>
+                    <span className="text-sm -500  px-3 py-1 rounded-full">
                       Degree
                     </span>
                   </div>
-                  <p className="text-gray-600 mb-3 font-medium">
+                  <p className="-600 mb-3 font-medium">
                     [Your University Name]
                   </p>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className=" leading-relaxed">
                     Focus on{" "}
                     <span className="font-semibold text-blue-600">Logic</span>,{" "}
                     <span className="font-semibold text-blue-600">
@@ -73,9 +69,7 @@ const Qualification = () => {
               <div className="p-3 bg-purple-100 rounded-lg">
                 <Briefcase className="text-purple-600" size={28} />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-                Experience
-              </h3>
+              <h3 className="text-2xl md:text-3xl font-bold ">Experience</h3>
             </div>
 
             <div className="relative">
@@ -87,17 +81,15 @@ const Qualification = () => {
                 <div className="absolute left-4 top-1 w-4 h-4 bg-purple-600 rounded-full border-4 border-white shadow-lg"></div>
                 <div className="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-purple-600">
                   <div className="flex items-start justify-between mb-2">
-                    <h4 className="text-xl font-bold text-gray-900">
+                    <h4 className="text-xl font-bold ">
                       Operations Associate & In-House Developer
                     </h4>
-                    <span className="text-sm text-gray-500 bg-white px-3 py-1 rounded-full">
+                    <span className="text-sm -500  px-3 py-1 rounded-full">
                       Current
                     </span>
                   </div>
-                  <p className="text-gray-600 mb-3 font-medium">
-                    [Name of Pharmacy]
-                  </p>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="-600 mb-3 font-medium">[Name of Pharmacy]</p>
+                  <p className=" leading-relaxed">
                     Built a custom{" "}
                     <span className="font-semibold text-purple-600">
                       Inventory & Accounts Management App

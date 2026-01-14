@@ -13,7 +13,7 @@ const Skills = () => {
       case "Tools":
         return <Wrench className="text-green-600" size={24} />;
       default:
-        return <Code className="text-gray-600" size={24} />;
+        return <Code className="-600" size={24} />;
     }
   };
 
@@ -32,14 +32,14 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">
               Skills
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg -600">
               Technologies and tools I work with
             </p>
           </div>
@@ -74,40 +74,40 @@ const Skills = () => {
             return (
               <AnimatedSection key={index} delay={index * 0.1}>
                 <motion.div
-                  className={`bg-white rounded-xl shadow-lg p-6 border-2 ${colors.cardBorder}`}
+                  className={` rounded-xl shadow-lg p-6 border-2 ${colors.cardBorder}`}
                   whileHover={{ y: -5, shadow: "xl" }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className={`p-2 rounded-lg ${colors.bg}`}>
-                    {getCategoryIcon(category.category)}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {category.category}
-                  </h3>
-                </div>
-
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex}>
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm font-medium text-gray-700">
-                          {skill.name}
-                        </span>
-                        <span className={`text-sm font-semibold ${colors.text}`}>
-                          {skill.level}%
-                        </span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
-                        <div
-                          className={`h-full ${colors.progress} rounded-full transition-all duration-1000 ease-out`}
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className={`p-2 rounded-lg ${colors.bg}`}>
+                      {getCategoryIcon(category.category)}
                     </div>
-                  ))}
-                </div>
-              </motion.div>
+                    <h3 className="text-xl font-bold ">{category.category}</h3>
+                  </div>
+
+                  <div className="space-y-4">
+                    {category.skills.map((skill, skillIndex) => (
+                      <div key={skillIndex}>
+                        <div className="flex justify-between items-center mb-2">
+                          <span className="text-sm font-medium ">
+                            {skill.name}
+                          </span>
+                          <span
+                            className={`text-sm font-semibold ${colors.text}`}
+                          >
+                            {skill.level}%
+                          </span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
+                          <div
+                            className={`h-full ${colors.progress} rounded-full transition-all duration-1000 ease-out`}
+                            style={{ width: `${skill.level}%` }}
+                          ></div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
               </AnimatedSection>
             );
           })}
@@ -118,4 +118,3 @@ const Skills = () => {
 };
 
 export default Skills;
-

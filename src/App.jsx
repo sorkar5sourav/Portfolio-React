@@ -8,16 +8,14 @@ import "./index.css";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col max-w-7xl mx-auto">
-        <Navbar />
-        <main className="grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/project/:id" element={<ProjectDetails />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <Navbar />
+      <main className="grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project/:id" element={<ProjectDetails />} />
+        </Routes>
+      </main>
+      <Footer />
     </Router>
   );
 }

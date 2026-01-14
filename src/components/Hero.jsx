@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import { Download, Github, Linkedin, Facebook } from "lucide-react";
+import { Download, Github } from "lucide-react";
+import Potrate from "../assets/Potrate.png";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaFacebookSquare } from "react-icons/fa";
 
 const Hero = () => {
   const handleDownloadResume = () => {
-    // Placeholder for resume download - will be updated with actual PDF later
-    // For now, create a simple text file as placeholder
     const link = document.createElement("a");
-    link.href = "#"; // Replace with actual PDF path: "/resume/Sorkar_Sourav_Resume.pdf"
+    link.href = "#";
     link.download = "Sorkar_Sourav_Resume.pdf";
-    // Note: Replace "#" with actual PDF file path when resume is ready
     link.click();
   };
 
@@ -48,9 +48,9 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-16 md:pt-20"
+      className="min-h-screen flex items-center justify-center bg-linea-to-br from-blue-50 via-white to-purple-50 pt-20"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
           variants={containerVariants}
@@ -59,32 +59,35 @@ const Hero = () => {
         >
           {/* Left Side - Text Content */}
           <motion.div
-            className="text-center lg:text-left space-y-6"
+            className="text-center lg:text-left flex flex-col items-center lg:items-start gap-6"
             variants={itemVariants}
           >
             <motion.div className="space-y-4" variants={itemVariants}>
               <motion.h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold  leading-tight"
                 variants={itemVariants}
               >
-                Hi, I'm <span className="text-blue-600">Sorkar Sourav</span>
+                Hi, I'm{" "}
+                <span className="bg-linear-to-br from-purple-600 to-blue bg-clip-text text-transparent">
+                  Sorkar Sourav
+                </span>
               </motion.h1>
               <motion.h2
-                className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-700"
+                className="text-2xl md:text-3xl lg:text-4xl font-semibold "
                 variants={itemVariants}
               >
                 Junior Fullstack Web Developer
               </motion.h2>
               <motion.p
-                className="text-lg md:text-xl text-gray-600 italic"
+                className="text-lg md:text-xl -600 italic"
                 variants={itemVariants}
               >
-                Specializing in Frontend
+                Specializing in Backend
               </motion.p>
             </motion.div>
 
             <motion.p
-              className="text-xl md:text-2xl text-gray-700 font-medium pt-4"
+              className="text-xl md:text-2xl  font-medium pt-4"
               variants={itemVariants}
             >
               Solving complex problems with{" "}
@@ -94,59 +97,59 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 pt-6 justify-center lg:justify-start"
+              className="flex gap-6 items-center justify-center lg:justify-start"
               variants={itemVariants}
             >
               <motion.button
                 onClick={handleDownloadResume}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+                className="btn items-center justify-center gap-2 md:text-lg w-2/3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue transition-colors shadow-lg hover:shadow-xl"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Download size={20} />
                 Download Resume
               </motion.button>
+              <motion.div
+                className="flex gap-4 justify-center lg:justify-start pt-4"
+                variants={itemVariants}
+              >
+                <motion.a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 ml-4 bg-gray-100 rounded-full hover:bg-blue-100  hover:text-blue-600 transition-colors"
+                  aria-label="GitHub"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaGithub size={30} />
+                </motion.a>
+                <motion.a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-100 rounded-full hover:bg-blue-100  hover:text-blue-600 transition-colors"
+                  aria-label="LinkedIn"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaLinkedin size={30} />
+                </motion.a>
+                <motion.a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-100 rounded-full hover:bg-blue-100  hover:text-blue-600 transition-colors"
+                  aria-label="Facebook"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaFacebookSquare size={30} />
+                </motion.a>
+              </motion.div>
             </motion.div>
 
             {/* Social Media Icons */}
-            <motion.div
-              className="flex gap-4 justify-center lg:justify-start pt-4"
-              variants={itemVariants}
-            >
-              <motion.a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-gray-100 rounded-full hover:bg-blue-100 text-gray-700 hover:text-blue-600 transition-colors"
-                aria-label="GitHub"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Github size={24} />
-              </motion.a>
-              <motion.a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-gray-100 rounded-full hover:bg-blue-100 text-gray-700 hover:text-blue-600 transition-colors"
-                aria-label="LinkedIn"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Linkedin size={24} />
-              </motion.a>
-              <motion.a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-gray-100 rounded-full hover:bg-blue-100 text-gray-700 hover:text-blue-600 transition-colors"
-                aria-label="Facebook"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Facebook size={24} />
-              </motion.a>
-            </motion.div>
           </motion.div>
 
           {/* Right Side - Photo */}
@@ -156,13 +159,13 @@ const Hero = () => {
           >
             <div className="relative">
               <motion.div
-                className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1 shadow-2xl"
+                className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-linear-to-br from-blue-400 to-purple-500 p-1 shadow-2xl"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden flex items-center justify-center">
                   <img
-                    src="https://via.placeholder.com/400x400?text=Sorkar+Sourav"
+                    src={Potrate}
                     alt="Sorkar Sourav"
                     className="w-full h-full object-cover"
                   />

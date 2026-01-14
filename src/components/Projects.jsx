@@ -13,14 +13,14 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">
               Projects
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg -600">
               Some of my recent work and projects
             </p>
           </div>
@@ -30,7 +30,7 @@ const Projects = () => {
           {projectsData.map((project, index) => (
             <AnimatedSection key={project.id} delay={index * 0.1}>
               <motion.div
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
+                className=" rounded-xl shadow-lg overflow-hidden"
                 whileHover={{ y: -5, shadow: "xl" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -41,21 +41,19 @@ const Projects = () => {
                     alt={project.name}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
                 </div>
 
                 {/* Project Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {project.name}
-                  </h3>
+                  <h3 className="text-xl font-bold  mb-3">{project.name}</h3>
 
                   {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.stack.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full"
+                        className="px-3 py-1 bg-blue-100 text-blue text-xs font-medium rounded-full"
                       >
                         {tech}
                       </span>
@@ -63,7 +61,7 @@ const Projects = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  <p className="-600 text-sm mb-4 line-clamp-3">
                     {project.description}
                   </p>
 
@@ -71,7 +69,7 @@ const Projects = () => {
                   <div className="flex gap-3">
                     <button
                       onClick={() => handleViewDetails(project.id)}
-                      className="flex-1 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors text-sm"
+                      className="flex-1 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue transition-colors text-sm"
                     >
                       View Details
                     </button>
@@ -80,7 +78,7 @@ const Projects = () => {
                         href={project.liveLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors"
+                        className="px-4 py-2 border-2 border-gray-300  rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors"
                         aria-label="Live Demo"
                       >
                         <ExternalLink size={18} />
@@ -91,7 +89,7 @@ const Projects = () => {
                         href={project.repoLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors"
+                        className="px-4 py-2 border-2 border-gray-300  rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors"
                         aria-label="GitHub Repository"
                       >
                         <Github size={18} />

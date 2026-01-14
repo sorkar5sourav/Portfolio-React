@@ -3,11 +3,11 @@ import AnimatedSection from "./AnimatedSection";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">
               About Me
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
@@ -22,12 +22,10 @@ const About = () => {
                 <div className="p-3 bg-blue-100 rounded-lg">
                   <GraduationCap className="text-blue-600" size={28} />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-                  My Journey
-                </h3>
+                <h3 className="text-2xl md:text-3xl font-bold ">My Journey</h3>
               </div>
 
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4  leading-relaxed">
                 <p className="text-lg">
                   My journey began with a{" "}
                   <span className="font-semibold text-blue-600">
@@ -59,7 +57,7 @@ const About = () => {
                 <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">
                   <div className="flex items-start gap-3">
                     <Code className="text-blue-600 mt-1" size={24} />
-                    <p className="text-gray-700">
+                    <p className="">
                       <span className="font-semibold">Work Style:</span> I love
                       building user-friendly interfaces and optimizing
                       workflows. Every line of code I write is crafted with the
@@ -79,12 +77,12 @@ const About = () => {
                 <div className="p-3 bg-purple-100 rounded-lg">
                   <Puzzle className="text-purple-600" size={28} />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                <h3 className="text-2xl md:text-3xl font-bold ">
                   Beyond Coding
                 </h3>
               </div>
 
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4  leading-relaxed">
                 <p className="text-lg">
                   When I'm not coding, I enjoy challenging my mind with{" "}
                   <span className="font-semibold text-purple-600">
@@ -104,8 +102,8 @@ const About = () => {
                   professionally.
                 </p>
 
-                <div className="mt-6 p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg">
-                  <p className="text-gray-700 italic text-lg">
+                <div className="mt-6 p-6 bg-linear-to-br from-purple-50 to-blue-50 rounded-lg">
+                  <p className=" italic text-lg">
                     "The best code is not just functional—it's elegant,
                     maintainable, and solves real problems for real people."
                   </p>

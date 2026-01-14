@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import Logo from "../assets/Logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,22 +39,70 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 max-w-7xl mx-auto transition-all duration-300 ${
-        isScrolled ? "bg-white/80 backdrop-blur-md shadow-md" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 container mx-auto transition-all duration-300 ${
+        isScrolled ? " backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
     >
-      <div className=" px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo/Brand */}
-          <Link
-            to="/"
-            className="text-xl md:text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors"
-          >
-            Sorkar Sourav
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+      <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {" "}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />{" "}
+              </svg>
+            </div>
+            <ul
+              tabIndex="-1"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a>Item 1</a>
+              </li>
+              <li>
+                <a>Parent</a>
+                <ul className="p-2">
+                  <li>
+                    <a>Submenu 1</a>
+                  </li>
+                  <li>
+                    <a>Submenu 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a>Item 3</a>
+              </li>
+            </ul>
+          </div>
+          <a className="btn btn-ghost text-xl">
+            {" "}
+            <Link
+              to="/"
+              className="text-xl md:text-3xl font-bold -800 hover:text-blue-600 flex items-center gap-2 transition-colors"
+            >
+              <img
+                src={Logo}
+                alt="Logo"
+                className="h-8 md:h-10 rounded-lg w-auto"
+              />
+              Sorkar Sourav
+            </Link>
+          </a>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <div className="hidden md:flex items-center ml-8 gap-6">
             {navLinks.map((link) => (
               <button
                 key={link.name}
@@ -62,46 +111,16 @@ const Navbar = () => {
                   location.pathname === link.path ||
                   (link.path === "/#about" && location.hash === "#about")
                     ? "text-blue-600"
-                    : "text-gray-700 hover:text-blue-600"
+                    : " hover:text-blue-600"
                 }`}
               >
                 {link.name}
               </button>
             ))}
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-      </div>
-
-      {/* Mobile Menu Drawer */}
-      <div
-        className={`md:hidden fixed top-16 left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg transition-transform duration-300 ease-in-out z-40 ${
-          isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-        }`}
-      >
-        <div className="px-4 py-6 space-y-4">
-          {navLinks.map((link) => (
-            <button
-              key={link.name}
-              onClick={() => handleLinkClick(link.path)}
-              className={`block w-full text-left py-2 text-base font-medium transition-colors ${
-                location.pathname === link.path ||
-                (link.path === "/#about" && location.hash === "#about")
-                  ? "text-blue-600"
-                  : "text-gray-700 hover:text-blue-600"
-              }`}
-            >
-              {link.name}
-            </button>
-          ))}
+        <div className="navbar-end">
+          <a className="btn">Button</a>
         </div>
       </div>
     </nav>
@@ -109,3 +128,22 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+{
+  /* <div className="hidden md:flex items-center mr-8">
+  {navLinks.map((link) => (
+    <button
+      key={link.name}
+      onClick={() => handleLinkClick(link.path)}
+      className={`text-sm font-medium transition-colors ${
+        location.pathname === link.path ||
+        (link.path === "/#about" && location.hash === "#about")
+          ? "text-blue-600"
+          : " hover:text-blue-600"
+      }`}
+    >
+      {link.name}
+    </button>
+  ))}
+</div>; */
+}
